@@ -1,0 +1,28 @@
+{
+  "builders": [
+    {
+      "source_path": "bento/ubuntu-18.04",
+      "box_name": "bento/ubuntu-18.04",
+      "provider": "virtualbox",
+      "type": "vagrant",
+      "communicator": "ssh",
+      "skip_add": true
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "provisioning/playbook.yml",
+      "galaxy_file": "provisioning/requirements.yml",
+      "user": "vagrant"
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "shell-local",
+      "inline": [
+        "mv output-vagrant/package.box output-vagrant/kubernetes-ubuntu18.04.box"
+      ]
+    }
+  ]
+}
