@@ -19,12 +19,12 @@
     filename: kubernetes.list
     state: present
 
-- name: Install kubelet, kubeadm and kubectl
+- name: Install kubelet v{{ kubelet_version }}, kubeadm v{{ kubeadm_version }}, kubectl v{{ kubectl_version }}
   apt:
     name:
-      - kubelet
-      - kubeadm
-      - kubectl
+      - kubelet={{ kubelet_version }}
+      - kubeadm={{ kubeadm_version }}
+      - kubectl={{ kubectl_version }}
     state: present
     update_cache: true
 
