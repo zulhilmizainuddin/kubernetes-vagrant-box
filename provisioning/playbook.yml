@@ -5,3 +5,4 @@
     - geerlingguy.swap
     - docker
     - kubebin
+    - helm
