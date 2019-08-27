@@ -1,0 +1,10 @@
+---
+dist: bionic
+sudo: required
+
+install:
+  - sudo apt-get -y update
+  - sudo apt-get -y install yamllint
+
+script:
+  - yamllint .
