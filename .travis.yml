@@ -1,6 +1,5 @@
 ---
 dist: bionic
-sudo: required
 
 services:
   - docker
@@ -8,10 +7,6 @@ services:
 before_install:
   - docker build -t packer .
 
-install:
-  - sudo apt-get -y update
-  - sudo apt-get -y install yamllint
-
 script:
-  - yamllint .
+  - docker run --rm -v $(pwd):/yaml sdesbure/yamllint yamllint .
   - docker run --rm -v $(pwd):/usr/src/app packer validate vagrantbox.json
