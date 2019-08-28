@@ -1,5 +1,5 @@
 FROM hashicorp/packer:light
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/box
 
 RUN apk add -u ansible

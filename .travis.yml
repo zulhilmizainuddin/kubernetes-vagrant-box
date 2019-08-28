@@ -9,4 +9,4 @@ before_install:
 
 script:
   - docker run --rm -v $(pwd):/yaml sdesbure/yamllint yamllint .
-  - docker run --rm -v $(pwd):/usr/src/app packer validate vagrantbox.json
+  - docker run --rm -v $(pwd):/usr/src/box packer validate vagrantbox.json
