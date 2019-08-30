@@ -1,4 +1,4 @@
-# kubernetes-vagrant-box
+# kubernetes-vagrant-box [![Build Status](https://travis-ci.org/zulhilmizainuddin/kubernetes-vagrant-box.svg?branch=master)](https://travis-ci.org/zulhilmizainuddin/kubernetes-vagrant-box)
 Packer script for building Ubuntu 18.04 vagrant box with Docker, kubelet, kubeadm, kubectl and helm installed
 
 ## Prerequisite
