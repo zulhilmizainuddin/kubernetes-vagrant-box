@@ -18,11 +18,19 @@
     }
   ],
   "post-processors": [
-    {
-      "type": "shell-local",
-      "inline": [
-        "mv output-vagrant/package.box output-vagrant/kubernetes-ubuntu18.04.box"
-      ]
-    }
+    [
+      {
+        "type": "shell-local",
+        "inline": [
+          "vagrant box add -f output-vagrant/package.box --name zulhilmizainuddin/kubernetes-ubuntu18.04"
+        ]
+      },
+      {
+        "type": "shell-local",
+        "inline": [
+          "rm -rfv output-vagrant"
+        ]
+      }
+    ]
   ]
 }
