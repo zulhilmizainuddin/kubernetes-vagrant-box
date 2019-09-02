@@ -12,3 +12,6 @@ Install the following components into local machine
 ```
 $ packer build vagrantbox.json
 ```
+
+## Vagrand cloud
+Vagrant box available for download at https://app.vagrantup.com/zulhilmizainuddin/boxes/kubernetes-ubuntu18.04
